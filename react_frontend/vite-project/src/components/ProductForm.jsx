@@ -9,7 +9,7 @@ function ProductForm({ loadProducts }) {
     try {
       await axios.post("http://localhost:8000/api/products", form);
       setForm({ name: "", price: "" });
-      loadProducts(); // Reload products in parent
+      loadProducts(); // Reload products in parent.
     } catch (err) {
       console.error(err);
     }
