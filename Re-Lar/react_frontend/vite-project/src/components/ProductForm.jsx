@@ -33,7 +33,7 @@ function ProductForm({ loadProducts }) {
         required
         style={{ marginRight: 10 }}
       />
-      <button type="submit">Add Products</button>
+      <button type="submit">Adding Products</button>
     </form>
   );
 }
