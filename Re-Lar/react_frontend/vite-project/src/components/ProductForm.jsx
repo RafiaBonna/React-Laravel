@@ -19,7 +19,7 @@ function ProductForm({ loadProducts }) {
     <form onSubmit={handleSubmit} style={{ marginBottom: 20 }}>
       <input
         type="text"
-        placeholder="Products Name"
+        placeholder="All Products Name"
         value={form.name}
         onChange={(e) => setForm({ ...form, name: e.target.value })}
         required
