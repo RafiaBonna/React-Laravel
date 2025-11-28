@@ -27,7 +27,7 @@ function ProductForm({ loadProducts }) {
       />
       <input
         type="number"
-        placeholder="Price"
+        placeholder="Prices"
         value={form.price}
         onChange={(e) => setForm({ ...form, price: e.target.value })}
         required
