@@ -23,7 +23,7 @@ function ProductForm({ loadProducts }) {
         value={form.name}
         onChange={(e) => setForm({ ...form, name: e.target.value })}
         required
-        style={{ marginRight: 10 }}
+        style={{ marginRight: 11 }}
       />
       <input
         type="number"
