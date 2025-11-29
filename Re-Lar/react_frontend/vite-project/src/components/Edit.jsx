@@ -31,7 +31,7 @@ function ProductForm({ loadProducts }) {
         value={form.price}
         onChange={(e) => setForm({ ...form, price: e.target.value })}
         required
-        style={{ marginRight: 10 }}
+        style={{ marginRight: 11 }}
       />
       <button type="submit">Update Product</button>
     </form>
