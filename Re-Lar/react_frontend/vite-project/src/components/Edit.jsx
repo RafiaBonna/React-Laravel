@@ -16,7 +16,7 @@ function ProductForm({ loadProducts }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: 20 }}>
+    <form onSubmit={handleSubmit} style={{ marginBottom: 22 }}>
       <input
         type="text"
         placeholder="Product Name"
