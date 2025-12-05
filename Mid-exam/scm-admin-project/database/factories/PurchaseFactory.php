@@ -2,22 +2,21 @@
 
 namespace Database\Factories;
 
+use App\Models\Purchase;
+use App\Models\Supplier;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Purchase>
- */
 class PurchaseFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    protected $model = Purchase::class;
+
     public function definition(): array
     {
         return [
-            //
+            'supplier_id' => Supplier::factory(),
+            'invoice_no' => 'INV-' . $this->faker->unique()->numberBetween(1000, 9999),
+            'purchase_date' => $this->faker->date(),
+            'total_amount' => $this->faker->randomFloat(2, 500, 5000),
         ];
     }
 }

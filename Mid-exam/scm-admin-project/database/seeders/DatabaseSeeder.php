@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-// database/seeders/DatabaseSeeder.php
-
-use App\Models\User; 
+use App\Models\User;
 use App\Models\Product;
 use App\Models\Supplier;
 use App\Models\Warehouse;
@@ -15,18 +13,23 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // 1. Admin User তৈরি:
-        User::factory()->create([
-            'name' => 'Admin User',
-            'email' => 'admin@admin.com', 
-            'password' => Hash::make('password'), 
-        ]);
+        // 1. Admin User create (Duplicate-Proof)
+        User::firstOrCreate(
+            ['email' => 'admin@admin.com'],
+            [
+                'name' => 'Admin User',
+                'password' => Hash::make('password'),
+                'email_verified_at' => now(),
+            ]
+        );
 
-        // 2. Demo Data তৈরি:
+        // 2. Factories:
         Supplier::factory(10)->create();
         Warehouse::factory(4)->create();
         Product::factory(30)->create();
 
-        // Note: Purchase, Sale, এবং Stock-এর জন্য Seeding পরের ধাপে করবো।
+        // 3. Purchase → Stock → Sale
+        $this->call(PurchaseStockSeeder::class); 
+        $this->call(SaleSeeder::class);
     }
 }
