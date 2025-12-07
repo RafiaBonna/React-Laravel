@@ -1,0 +1,11 @@
+/* scm-frontend/src/index.css */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom Global Styles for AdminLTE feel */
+body {
+  background-color: #f4f6f9; /* AdminLTE Background */
+  font-family: 'Inter', sans-serif;
+}
+.sidebar-wrapper {
+  background-color: #343a40 !important; /* Dark AdminLTE sidebar */
+}
