@@ -35,6 +35,7 @@ function ProductForm({ loadProducts }) {
       />
       <button type="submit">Add Product</button>
       <h2>Hello</h2>
+      <h2>Hello</h2>
     </form>
   );
 }
