@@ -34,6 +34,7 @@ function ProductForm({ loadProducts }) {
         style={{ marginRight: 10 }}
       />
       <button type="submit">Add Product</button>
+      <h2>Hello</h2>
     </form>
   );
 }
