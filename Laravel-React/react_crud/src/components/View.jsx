@@ -55,7 +55,7 @@ const View = () => {
                                 <li className="list-group-item"><strong>Product Name:</strong> {product.name}</li>
                                 <li className="list-group-item"><strong>Price (Taka):</strong> {product.price}</li>
                                 <li className="list-group-item"><strong>Created At:</strong> {new Date(product.created_at).toLocaleString()}</li>
-                                <li className="list-group-item"><strong>Last Updated:</strong> {new Date(product.updated_at).toLocaleString()}</li>
+                                <li className="list-group-item"><strong>Last 1 Updated:</strong> {new Date(product.updated_at).toLocaleString()}</li>
                             </ul>
                             
                             <button 
